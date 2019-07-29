@@ -1,0 +1,80 @@
+﻿@model IEnumerable<MvcBlogSitem.Models.Makale>
+@{
+    Layout = null;
+}
+<script src="~/Content/style/js/jquery.min.js"></script>
+<script>
+    $(document).ready(function myfunction() {
+        $("a.begen").click(function myfunction() {
+            var id = $(this).data("id");
+            var link = "/Makale/Begen/" + id;
+            $.ajax({
+
+                type:"GET",
+                url: link,
+                success: function (result) {
+                    $("a.begen").html(result);
+                }
+
+            });
+
+        });
+    });
+</script>
+
+
+@helper IcerikKisalt(string metin)
+{
+
+    if (metin.Length > 300)
+    {
+        @metin.Substring(0, 300)
+    }
+    else
+    {
+        @metin
+    }
+}
+
+
+<div class="blog-posts col-blog">
+    @foreach (var makale in Model)
+    {
+        <div class="post row">
+            <div class="col-sm-4">
+                <figure>
+                    <a href="/Makale/Detay/@makale.MakaleId">
+                        <div class="text-overlay">
+                            <div class="info"><span>Devamını Oku..</span></div>
+                        </div>
+                        <img src="@Url.Content(makale.Resim.OrtaBoyut)" alt="" />
+                    </a>
+                </figure>
+            </div>
+            <div class="col-sm-8 post-content">
+                <div class="meta">
+                    <span class="date">@makale.EklenmeTarihi.ToShortDateString()</span>
+                    <span class="comments">
+                        <a href="#">@makale.Yorums.Count  <i class="icon-chat-1"></i></a>
+                    </span>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                    <span>
+                        <a class="begen" href="javascript:void(0);" data-id="@makale.MakaleId">@makale.BegeniSayisi<i class="icon-thumbs-up"></i> </a> 
+                    </span>
+                    }
+
+                    <span>
+                        <a href="#">@makale.GoruntulenmeSayisi <i class="icon-eye-1"></i></a>
+                    </span>
+                </div>
+                <h2 class="post-title"><a href="/Makale/Detay/@makale.MakaleId">@makale.Baslik</a></h2>
+                <p>@IcerikKisalt(makale.Icerik)     <a href="/Makale/Detay/@makale.MakaleId">Devamını Oku...</a></p>
+
+            </div>
+        </div>
+    }
+
+
+</div>
+

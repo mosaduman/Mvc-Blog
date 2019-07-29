@@ -1,0 +1,73 @@
+﻿@model MvcBlogSitem.Models.Makale
+
+@{
+    ViewBag.Title = "Sil";
+}
+
+
+<h3>Makaleyi Silmek İstediğinize Emin Misiniz?</h3>
+<div>
+
+    <hr />
+    <img src="@Url.Content(Model.Resim.BuyukBoyut)" alt="" />
+    <dl class="dl-horizontal">
+
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Baslik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Baslik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Icerik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Icerik)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoruntulenmeSayisi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoruntulenmeSayisi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BegeniSayisi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BegeniSayisi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kategori.Adi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kategori.Adi)
+        </dd>
+
+
+
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-actions no-color col-md-offset-5">
+            <input type="submit" value="Sil" class="btn btn-danger" />
+            @Html.ActionLink("Listeye Geri Dön", "Index", null, new { @class = "btn btn-warning btn-md" })
+        </div>
+
+    }
+</div>

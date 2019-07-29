@@ -1,0 +1,68 @@
+﻿@model IEnumerable<MvcBlogSitem.Models.Makale>
+
+@{
+    ViewBag.Title = "Makalelerim";
+}
+
+<h2>Makalelerim</h2>
+@{int a = 1;
+
+}
+<p>
+    @Html.ActionLink("Makale Ekle", "MakaleEkle")
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            Sıra
+
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Baslik)
+        </th>
+
+         <th>
+            @Html.DisplayNameFor(model => model.GoruntulenmeSayisi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BegeniSayisi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kategori.Adi)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @a
+                @{ a++;
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Baslik)
+            </td>
+
+          
+            <td>
+                @Html.DisplayFor(modelItem => item.GoruntulenmeSayisi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BegeniSayisi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kategori.Adi)
+            </td>
+
+            <td>
+                @Html.ActionLink("Düzenle", "Duzenle", new { id = item.MakaleId }, new { @class = "btn btn-warning btn-xs" })
+                @Html.ActionLink("Detay", "Detay", new { id = item.MakaleId }, new { @class = "btn btn-primary btn-xs" })
+                @Html.ActionLink("Sil", "Sil", new { id = item.MakaleId }, new { @class = "btn btn-danger btn-xs" })
+            </td>
+        </tr>
+    }
+
+</table>

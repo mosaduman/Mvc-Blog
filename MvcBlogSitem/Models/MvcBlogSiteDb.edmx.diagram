@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e22a015540104e55a1add03db0c07dd9" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="MvcBlogVt.Etiket" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="MvcBlogVt.Kategori" Width="1.5" PointX="3" PointY="9.125" />
+        <EntityTypeShape EntityType="MvcBlogVt.Kullanici" Width="1.5" PointX="3" PointY="3.625" />
+        <EntityTypeShape EntityType="MvcBlogVt.KullaniciRol" Width="1.5" PointX="8.25" PointY="4.875" />
+        <EntityTypeShape EntityType="MvcBlogVt.Makale" Width="1.5" PointX="5.25" PointY="4" />
+        <EntityTypeShape EntityType="MvcBlogVt.Resim" Width="1.5" PointX="0.75" PointY="4.625" />
+        <EntityTypeShape EntityType="MvcBlogVt.Rol" Width="1.5" PointX="6" PointY="1" />
+        <EntityTypeShape EntityType="MvcBlogVt.Yorum" Width="1.5" PointX="7.5" PointY="7.625" />
+        <AssociationConnector Association="MvcBlogVt.FK_Makale_Kategori" />
+        <AssociationConnector Association="MvcBlogVt.FK_Kullanici_Resim" />
+        <AssociationConnector Association="MvcBlogVt.FK_KullaniciRol_Kullanici" />
+        <AssociationConnector Association="MvcBlogVt.FK_Makale_Kullanici" />
+        <AssociationConnector Association="MvcBlogVt.FK_KullaniciRol_Rol" />
+        <AssociationConnector Association="MvcBlogVt.FK_Makale_Resim" />
+        <AssociationConnector Association="MvcBlogVt.FK_Yorum_Makale" />
+        <AssociationConnector Association="MvcBlogVt.MakaleEtiket" />
+        <AssociationConnector Association="MvcBlogVt.YazarTakip" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
