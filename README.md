@@ -32,6 +32,6 @@ kullanıcı rollerini sırayla açıklayalım.<br>
 ![Makale Detay](https://github.com/mosaduman/Mvc-Blog/blob/master/g%C3%B6r%C3%BCnt%C3%BCler/makaledetay.PNG)
 # Projeyi Çalıştırma
 1. Projeyi indirip microsoft visual studio 2012 ve üzeri bir sürümle açın.
-2. Web.Config dosyasındaki ConnectionString alanından kendi veritabanı yolunuzu verin.
+2. Web.Config dosyasındaki ConnectionString alanından kendi veritabanı yolunuzu belirtin.
 3. MvcBlogSitem projesini publish ettiğinizde ConnectionString alanında belirttiğiniz kodlara göre bir veritabanı oluşturulacaktır.
 veritabanındaki tablolara birkaç kayıt ekledikten sonra projeyi tekrar çalıştırın.Blog sitesinin giiriş yap bölümünden veritanında oluşturduğunuz kullanıcı tabloasundaki kayıtlara göre kullanıcı adı ve şifrenizi girerek blog sitesini istediğiniz gibi kullanın.
