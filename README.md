@@ -7,7 +7,8 @@ Blog sitesinde yapılabilen işlemler:<br>
  - Yazar takip etme
  - Sadece takip ettiğin yazarların makalelerini görebilme
  - Kategorilere göre makale listeleme
- - Popüler Makaleler listesi
+ - Popüler Makaleler listesi<br>
+ 
 Blog Sitesinde üye,yazar ve admin kullanıcı rolleri vardır.
 kullanıcı rollerini sırayla açıklayalım.<br>
 1. Üye
