@@ -19,8 +19,8 @@ kullanıcı rollerini sırayla açıklayalım.<br>
     - Makale Ekleme,Silme,Güncelleme işlemlerini yapar
     - Üyenin sahip olduğu tüm özelliklere sahiptir.
 3. Admin
-    - üyenin,yazarın hesabını pasif edebilme(silme).
-    - Kategori Ekleme,Silme,Güncelleme işlemlerini yapar.
+    - üyenin,yazarın hesabını aktif-pasif edebilme(silme).
+    - Kategori Ekleme,Silme,Güncelleme işlemlerini yapabilme.
     - Yazar ve üyenin sahip olduğu tüm özelliklere sahiptir.
     
 # Veritabanı Diagramı
